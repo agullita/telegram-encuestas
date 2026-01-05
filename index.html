@@ -13,6 +13,19 @@
 
   <button onclick="alert('Votaste SÍ')">👍 Sí</button>
   <button onclick="alert('Votaste NO')">👎 No</button>
+  <script>
+  const tg = window.Telegram.WebApp;
+  tg.ready();               // avisa a Telegram que la web está lista
+  tg.expand();              // intenta abrir a pantalla completa
+
+  // Opcional: leer info del usuario
+  console.log(tg.initDataUnsafe?.user);
+
+  // Opcional: adaptar colores al tema de Telegram
+  document.body.style.background = tg.themeParams.bg_color || "#fff";
+</script>
+
 </body>
 </html>
+
 
